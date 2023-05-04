@@ -7,7 +7,7 @@ A simple example of how to use Blazor to consume an API using the openweathermap
  - *Services* contains `WeatherService.cs`, where the HTTP calls are made
 
 ## Important Note!
-You shouldn't pass your API keys on a client (browser) side GET request in a hosted app. That would expose your API key and allow others to steal it and charge calls on your account.
+You shouldn't pass your API keys on a client (browser) side GET request in a hosted app. That would expose your API key and allow others to steal it and charge calls on your account. This app does that, and is intended to be an example only.
 
 ___
 
@@ -32,6 +32,18 @@ Before you begin, you should have the following installed on your machine:
 git clone https://github.com/ehilst515/BlazorAPIExample.git
 ```
 
+## Edit the App in VisualStudio
+
+1. Install [VisualStudio](https://visualstudio.microsoft.com/downloads/)
+2. Change the current working directory to the `BlazorAPIExample` directory.
+3. Start the solution by running the following command:
+
+```
+start BlazorAPIExample.sln
+```
+
+4. Update the line `string apiKey = "<Your API Key Here>";` in `Services.WeatherService` with [your own API key from openweathermap](https://openweathermap.org/api)
+
 ## Run the App
 
 1. Open a command prompt or terminal window.
@@ -42,10 +54,7 @@ git clone https://github.com/ehilst515/BlazorAPIExample.git
 dotnet run
 ```
 
-4. Open a web browser and navigate to `https://localhost:5001`.
+4. Open a web browser and navigate to `https://localhost:7076/weather`.
 
 You should see the Weather App running in your browser. Enter a zip code and click the "Get Weather" button to retrieve and display the current weather information.
 
-## Conclusion
-
-Congratulations! You have successfully cloned and run the Blazor WebAssembly Weather App on your local machine.
